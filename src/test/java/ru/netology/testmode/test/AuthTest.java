@@ -66,9 +66,6 @@ class AuthTest {
         $("[data-test-id='action-login'] ").click();
         $("[data-test-id='error-notification'] .notification__title").shouldBe(Condition.visible, Duration.ofSeconds(15));
         $$("div").find(Condition.partialText("Неверно указан логин или пароль")).shouldBe(Condition.visible);
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет с неверным
-        //  логином, для заполнения поля формы "Логин" используйте переменную wrongLogin,
-        //  "Пароль" - пользователя registeredUser
     }
 
     @Test
@@ -81,8 +78,5 @@ class AuthTest {
         $("[data-test-id='action-login'] ").click();
         $("[data-test-id='error-notification'] .notification__title").shouldBe(Condition.visible, Duration.ofSeconds(15));
         $$("div").find(Condition.partialText("Неверно указан логин или пароль")).shouldBe(Condition.visible);
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет с неверным
-        //  паролем, для заполнения поля формы "Логин" используйте пользователя registeredUser,
-        //  "Пароль" - переменную wrongPassword
     }
 }
